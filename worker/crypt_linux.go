@@ -28,8 +28,7 @@ type cryptCtx struct {
 
 func newCryptCtx() *cryptCtx {
 	var ctx cryptCtx
-	// zero it (Go already zeros, but being explicit is fine)
-	ctx.data.initialized = 0
+	ctx.data.initialized = 0 // zeroing explicitly
 	return &ctx
 }
 

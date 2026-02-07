@@ -8,7 +8,7 @@ import (
 	"assign2/internal/messages"
 )
 
-// WorkerInbox channels let the rest of your worker react without touching the socket directly.
+// WorkerInbox channels let your worker react without peeking the socket directly.
 type WorkerInbox struct {
 	Ack   chan messages.AckMsg
 	Job   chan messages.JobMsg
@@ -16,7 +16,7 @@ type WorkerInbox struct {
 	Err   chan error
 }
 
-// MakeWorkerInbox creates buffered channels to avoid deadlocks if messages arrive quickly.
+// MakeWorkerInbox creates buffered channels to avoid deadlocks.
 func MakeWorkerInbox() *WorkerInbox {
 	return &WorkerInbox{
 		Ack:   make(chan messages.AckMsg, 8),
@@ -26,8 +26,7 @@ func MakeWorkerInbox() *WorkerInbox {
 	}
 }
 
-// StartWorkerReceiver starts ONE goroutine that continuously reads messages from conn,
-// peeks their type, unmarshals into the correct struct, and dispatches to channels.
+// StartWorkerReceiver starts ONE thread that continuously reads messages from conn,
 func StartWorkerReceiver(r *bufio.Reader, inbox *WorkerInbox) {
 	go func() {
 		for {

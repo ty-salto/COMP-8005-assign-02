@@ -8,7 +8,7 @@ import (
 )
 
 // StartHeartbeatSender sends HEARTBEAT_REQ every hbSec seconds until stop is closed.
-// It only WRITES to the connection (safe to run alongside your receiver goroutine).
+// It only WRITES to the connection.
 func StartHeartbeatSender(conn net.Conn, hbSec int, stop <-chan struct{}) {
 	if hbSec <= 0 {
 		return
