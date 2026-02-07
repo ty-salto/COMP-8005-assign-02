@@ -1,0 +1,11 @@
+alpha:PLAINTEXT:abc:19000:0:99999:7:::
+bravo:$y$j9T$VPiFrUETDfysGTtafDBBm/$ts5vJRmoYpQQzL9HeuSXAF/BKYgmWa7.fLDVi/zPf04:19000:0:99999:7:::
+charlie:$2y$05$cwBvHH7FcflTXDwoRnTXuOVBUUPKu6VkekwBStAqjuAqGYAXqMzT6:19000:0:99999:7:::
+delta:$6$abcd$lu1vv04fwT8TLwBwqr7xf4laJ.RLt7Gcm.1Pn.pXapyBzsYLQyE72SF9AJyK97TnpU8q1iUw/6MY.u.yMMUnJ1:19000:0:99999:7:::
+echo:$5$abcd$bxRTpDkRAJlMN0qu89mDNnIwSodDK.Ak7peX6oCpb4/:19000:0:99999:7:::
+foxtrot:$1$abcd$sPQ/oAYxoNeCckLiHiTxt/:19000:0:99999:7:::
+bravo1:$y$j9T$jpdPPDeeeK7tdkF0OKhpR/$3lpOJ7Zkfc3V/Ow6HpMQDWwC/yEQcPggch5ybuuCm8C:19000:0:99999:7:::
+charlie1:$2y$05$mFemVTJ4EEDQiTJujofJpumgKLMd4ZVh9VmY5zeFyZKcWr9UMWyx6:19000:0:99999:7:::
+delta1:$6$abcd$EFFhTgEuXDfXuQta0HGXG4HI4giEp0funUIS3LWcfDjHzG9HlkZ0drJ6HGugd1Ch4IfDC.VjwopKGeLF1h8Q5/:19000:0:99999:7:::
+echo1:$5$abcd$6zLncCVDT5H9B6K84bz5em4ds5eSyPgYKA8D4hZx8L/:19000:0:99999:7:::
+foxtrot1:$1$abcd$Lr1.R3yi8tNHW9sXpaYn.1:19000:0:99999:7:::
