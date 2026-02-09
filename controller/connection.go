@@ -8,7 +8,7 @@ import (
 	"assign2/internal/messages"
 )
 
-// Inbox channels let the rest of your controller react without touching the socket directly.
+// Inbox channels let your controller react without peeking the socket directly.
 type Inbox struct {
 	Ack    chan messages.AckMsg
 	Result chan messages.ResultMsg
@@ -16,7 +16,7 @@ type Inbox struct {
 	Errors chan error
 }
 
-// MakeInbox creates buffered channels to avoid deadlocks if messages arrive quickly.
+// MakeInbox creates buffered channels to avoid deadlocks if messages arrive fast.
 func MakeInbox() *Inbox {
 	return &Inbox{
 		Ack:    make(chan messages.AckMsg, 8),
@@ -26,8 +26,7 @@ func MakeInbox() *Inbox {
 	}
 }
 
-// StartReceiver starts ONE goroutine that continuously reads messages from conn,
-// peeks their type, unmarshals into the correct struct, and dispatches to channels.
+// StartReceiver starts ONE thread that continuously reads messages from conn
 func StartReceiver(r *bufio.Reader, inbox *Inbox) {
 
 	go func() {

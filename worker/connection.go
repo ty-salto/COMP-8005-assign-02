@@ -16,7 +16,7 @@ type WorkerInbox struct {
 	Err   chan error
 }
 
-// MakeWorkerInbox creates buffered channels to avoid deadlocks.
+// MakeWorkerInbox creates buffered channels to avoid deadlocks if messages arrive fast.
 func MakeWorkerInbox() *WorkerInbox {
 	return &WorkerInbox{
 		Ack:   make(chan messages.AckMsg, 8),
